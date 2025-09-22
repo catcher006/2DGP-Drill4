@@ -14,7 +14,9 @@ def move_1():
         grass.draw(400, 30)
         character.clip_draw(frame * 80 + 5, 0, 80, 94, x, 130, 240, 282)
         if frame == 1:
-            x += 30
+            x += 40
+        else:
+            x += 10
         frame = (frame + 1) % 2
         update_canvas()
         delay(0.5)
@@ -54,9 +56,9 @@ def move_4():
         delay(0.05)
 
 while True:
-    #move_1()
-    #move_2()
-    #move_3()
+    move_1()
+    move_2()
+    move_3()
     move_4()
 
 close_canvas()
