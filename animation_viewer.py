@@ -14,4 +14,27 @@ for x in range (0,800,5):
     update_canvas()
     delay(0.5)
 
+
+def move_1():
+    pass
+
+
+def move_2():
+    pass
+
+
+def move_3():
+    pass
+
+
+def move_4():
+    pass
+
+
+while True:
+    move_1()
+    move_2()
+    move_3()
+    move_4()
+
 close_canvas()
