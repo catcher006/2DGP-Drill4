@@ -8,10 +8,13 @@ character = load_image('hero_spritesheet.png')
 # 사격 경계 자세 이동
 def move_1():
     frame = 0
-    for x in range(0, 800, 5):
+    x = 0
+    while x < 800:
         clear_canvas()
         grass.draw(400, 30)
-        character.clip_draw(frame * 94, 0, 94, 80, x, 120, 282, 240)
+        character.clip_draw(frame * 80 + 5, 0, 80, 94, x, 130, 240, 282)
+        if frame == 1:
+            x += 30
         frame = (frame + 1) % 2
         update_canvas()
         delay(0.5)
@@ -30,7 +33,14 @@ def move_2():
 
 
 def move_3():
-    pass
+    frame = 0
+    for x in range(0, 800, 5):
+        clear_canvas()
+        grass.draw(400, 30)
+        character.clip_draw(frame * 94, 200, 94, 80, 400,300, 2, 240)
+        frame = (frame + 1) % 6
+        update_canvas()
+        delay(0.5)
 
 
 def move_4():
@@ -38,7 +48,7 @@ def move_4():
 
 
 while True:
-    #move_1()
+    move_1()
     move_2()
     move_3()
     move_4()
