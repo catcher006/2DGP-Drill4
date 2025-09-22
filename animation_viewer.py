@@ -18,7 +18,15 @@ def move_1():
 
 
 def move_2():
-    pass
+    frames = [0, 1, 2, 1]
+    idx = 0
+    for x in range(0, 800, 5):
+        clear_canvas()
+        grass.draw(400, 30)
+        character.clip_draw(frames[idx] * 80, 100, 94, 80, x, 150, 282, 240)
+        idx = (idx + 1) % len(frames)
+        update_canvas()
+        delay(0.1)
 
 
 def move_3():
@@ -30,7 +38,7 @@ def move_4():
 
 
 while True:
-    move_1()
+    #move_1()
     move_2()
     move_3()
     move_4()
