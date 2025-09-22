@@ -55,6 +55,7 @@ def move_4():
         update_canvas()
         delay(0.05)
 
+#애니메이션 별로 프레임 크기가 다름
 while True:
     move_1()
     move_2()
