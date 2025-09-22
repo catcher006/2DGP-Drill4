@@ -31,26 +31,26 @@ def move_2():
         update_canvas()
         delay(0.1)
 
-
+# 걷기 경계 자세 이동
 def move_3():
     frame = 0
     for x in range(0, 800, 5):
         clear_canvas()
         grass.draw(400, 30)
-        character.clip_draw(frame * 94, 200, 94, 80, 400,300, 2, 240)
+        character.clip_draw(frame * 80 + 5, 188, 80, 94, x, 170, 240, 282)
         frame = (frame + 1) % 6
         update_canvas()
-        delay(0.5)
+        delay(0.1)
 
-
+# 뛰기 자세 이동
 def move_4():
     pass
 
 
 while True:
-    move_1()
-    move_2()
-    move_3()
+    #move_1()
+    #move_2()
+    #move_3()
     move_4()
 
 close_canvas()
