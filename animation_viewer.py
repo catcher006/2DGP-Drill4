@@ -42,7 +42,6 @@ def move_3():
         update_canvas()
         delay(0.1)
 
-# 뛰기 자세 이동
 def move_4():
     pass
 
